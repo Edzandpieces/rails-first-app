@@ -1,9 +1,18 @@
-<h1>contact us</h1>
-
-# OR:
-# don't include the = on members.each
-<ul>
-<% @members.each do |name|%>
-  <li><%= name %></li>
-  <% end %>
-</ul>
+<div>
+  <h1>contact us</h1>
+<%# form has action => PATH and method => HTTP_VERB %>
+  <form action="/contact" method="get">
+    <label for="member"> Member</label>
+    <%# input needs a type and a name %>
+    <input type="text" name="member" placeholder="who do you want to look for?">
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+    <%# # OR:
+  # don't include the = on members.each %>
+  <ul>   <%# er tag used %>
+    <% @members.each do |name|%>
+      <%# pe tag used %>
+      <li><%= name.capitalize %></li>
+    <% end %>
+  </ul>
+</div>

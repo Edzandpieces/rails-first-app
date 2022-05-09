@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+<%# bootstrap link goes here %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+      <div styles="background: lightgray; padding: 16px">
+        <ul>
+          <li><%= link_to "learn about us", about_path %></li>
+          <li><%= link_to "learn about us", contact_path %></li>
+        </ul>
+      </div>
     <%= yield %>
   </body>
 </html>
