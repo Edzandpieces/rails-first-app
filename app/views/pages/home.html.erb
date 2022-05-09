@@ -1,0 +1,12 @@
+<h1>welcome to our website</h1>
+<p>Today it is <strong><%= @time %></strong></p>
+
+# don't use a href here because it's too much info.
+# Use link_to instead, what do you want to display in the tag?:
+# also path of URL we want, in the root of the app = prefix. Look in the terminal
+
+<form actions="/contact" method="get">
+  <input type="text" name="member" placeholder="Who are you looking for?">
+  <input type="submit">
+</form>
+
